@@ -14,6 +14,7 @@ public enum TypeNotify {
 
 		private String value;
 
+
 		TypeNotify(String value) {
 				this.value = value;
 		}
@@ -22,11 +23,11 @@ public enum TypeNotify {
 				return value;
 		}
 
-		public static TypeNotify getType(final String type) {
+		public static TypeNotify getType(final String type) throws Exception {
 				for (TypeNotify notify : TypeNotify.values()) {
 						if (notify.getValue().equals(type))
 								return notify;
 				}
-				return null;
+				throw new Exception(String.format("Invalid type: %s", type));
 		}
 }

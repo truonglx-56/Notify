@@ -1,0 +1,13 @@
+<notify>
+
+    <notify-filter name="filter1" action-type="edit" class-general="bkav.com.app.notify.impl.TestTarget">
+        <filter name="test1" class="bkav.com.app.notify.impl.FilterTest"/>
+        <filter name="test1" class="bkav.com.app.notify.impl.FilterTest"/>
+    </notify-filter>
+
+    <notify-filter name="filter1" action-type="add" class-general="bkav.com.app.notify.impl.TestTarget">
+        <filter name="test1" class="bkav.com.app.notify.impl.FilterTest"/>
+        <filter name="test1" class="bkav.com.app.notify.impl.FilterTest"/>
+    </notify-filter>
+
+</notify>

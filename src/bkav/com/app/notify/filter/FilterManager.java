@@ -1,15 +1,14 @@
 package bkav.com.app.notify.filter;
 
-import bkav.com.app.notify.service.NotifyData;
 
 /**
  * Created by truonglx on 11/10/2017.
  */
 public class FilterManager {
-		private FilterChain filterChain;
+		final private FilterChain filterChain;
 
 		public FilterManager(Target target) {
-				filterChain = new FilterChain();
+				this.filterChain = new FilterChain();
 				filterChain.setTarget(target);
 		}
 
@@ -17,7 +16,7 @@ public class FilterManager {
 				filterChain.addFilter(filter);
 		}
 
-		public void filterRequest(NotifyData notifyData) {
-				filterChain.execute(notifyData);
+		public void filterRequest(Object data) throws Exception {
+				filterChain.execute(data);
 		}
 }

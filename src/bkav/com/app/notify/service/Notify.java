@@ -8,5 +8,7 @@ import bkav.com.app.notify.define.TypeNotify;
 public interface Notify {
 		TypeNotify getType();   //Type dang go, tu app hoac theo action
 
-		NotifyData getNotifyData();
+		NotifyDataResquest getNotifyDataResquest();
+
+		void setNotifyDataResquest(NotifyDataResquest data);
 }
